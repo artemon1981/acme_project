@@ -1,6 +1,7 @@
 from datetime import date
 
-from django.core.exceptions import ValidationError
+from django.core.exceptions import ValidationError  # type: ignore
+
 
 def real_age(value: date) -> None:
     age = (date.today() - value).days / 365
